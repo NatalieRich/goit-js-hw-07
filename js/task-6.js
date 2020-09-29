@@ -5,5 +5,7 @@ function onKeypress(event) {
   const checkInputText = (checkInput.textContent += event.key);
   if (checkInputText.length === 6) {
     checkInput.classList = "valid";
-  } else checkInput.classList = "invalid";
+  } else {
+    checkInput.classList = "invalid";
+  }
 }

@@ -24,6 +24,6 @@ const elemImage = images.map((option) => {
   items.alt = option.alt;
   listImages.insertAdjacentHTML(
     "beforebegin",
-    `<li> <img src=${items.src} atl=${items.alt}> </li>`
+    `<li> <img src=${items.src} atl="${items.alt}" /> </li>`
   );
 });

@@ -5,4 +5,7 @@ inputText.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
   changeName.textContent = event.currentTarget.value;
+  if (Number(event.currentTarget.value) < 1) {
+    changeName.textContent = "незнакомец";
+  }
 }

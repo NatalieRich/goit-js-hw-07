@@ -1,11 +1,10 @@
 const checkInput = document.querySelector("#validation-input");
-checkInput.addEventListener("keypress", onKeypress);
+checkInput.addEventListener("blur", onKeypress);
 
 function onKeypress(event) {
-  const checkInputText = (checkInput.textContent += event.key);
-  if (checkInputText.length === 6) {
-    checkInput.classList = "valid";
-  } else {
-    checkInput.classList = "invalid";
+  checkInput.classList.add("invalid");
+
+  if (event.currentTarget.value.length === Number(checkInput.dataset.length)) {
+    checkInput.classList.replace("invalid", "valid");
   }
 }
